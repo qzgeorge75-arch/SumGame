@@ -1,11 +1,27 @@
-<div align="center">
+# 数字消消乐 (Sum Blast Puzzle)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+一个基于 React + Vite + Tailwind CSS 开发的高性能数字消除益智游戏。
 
-  <h1>Built with AI Studio</h2>
+## 游戏特色
+- **时尚视觉**：采用《时代周刊》风格的时尚衬线字体，搭配可爱的粉色小猫主题界面。
+- **核心玩法**：通过点击数字方块，使它们的总和等于目标数字即可消除。
+- **多种模式**：
+  - **经典模式**：每次消除后新增一行，挑战生存极限。
+  - **计时模式**：每 10 秒强制新增一行，考验反应速度。
+- **危险区域**：顶层设有红色危险区域，方块触碰即失败。
+- **多语言支持**：支持中英文一键切换。
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 技术栈
+- **前端框架**: React 18
+- **样式**: Tailwind CSS
+- **动画**: Framer Motion
+- **特效**: Canvas Confetti
+- **构建工具**: Vite
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 本地开发
+1. 克隆仓库: `git clone <repo-url>`
+2. 安装依赖: `npm install`
+3. 启动开发服务器: `npm run dev`
 
-</div>
+## 部署
+本项目支持在 Vercel 上一键部署。请确保在环境变量中配置 `GEMINI_API_KEY`。

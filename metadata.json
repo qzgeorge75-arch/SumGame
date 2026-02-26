@@ -1,0 +1,5 @@
+{
+  "name": "数字消消乐",
+  "description": "A strategic number elimination game where you sum up blocks to reach a target value. Features Classic and Time modes.",
+  "requestFramePermissions": []
+}
