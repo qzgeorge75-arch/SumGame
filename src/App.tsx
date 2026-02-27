@@ -113,9 +113,10 @@ const getRandomTarget = () => Math.floor(Math.random() * 15) + 10;
 
 const KittenTitle = ({ text }: { text: string }) => (
   <motion.div 
-    initial={{ scale: 0.9, opacity: 0 }}
-    animate={{ scale: 1, opacity: 1 }}
-    className="relative inline-block mb-8 md:mb-12"
+    initial={{ opacity: 0.01, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    className="relative inline-block mb-8 md:mb-12 z-10"
   >
     {/* Ears */}
     <motion.div 
@@ -130,9 +131,11 @@ const KittenTitle = ({ text }: { text: string }) => (
     />
     
     {/* Main Body (Head) */}
-    <div className="relative bg-rose-400 px-6 py-4 md:px-12 md:py-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-rose-300/50 border-2 md:border-4 border-white/20">
-      <h1 className="text-3xl md:text-7xl font-black tracking-tighter drop-shadow-md font-serif italic whitespace-nowrap bg-gradient-to-r from-yellow-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent">
-        {text}
+    <div className="relative bg-rose-400 px-6 py-4 md:px-12 md:py-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-rose-300/50 border-2 md:border-4 border-white/20 min-w-[240px] md:min-w-[400px]">
+      <h1 className="text-3xl md:text-7xl font-black tracking-tighter drop-shadow-md font-serif italic whitespace-nowrap">
+        <span className="bg-gradient-to-r from-yellow-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent [-webkit-background-clip:text] [background-clip:text] selection:bg-rose-200">
+          {text}
+        </span>
       </h1>
       
       {/* Whiskers Left */}
