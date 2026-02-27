@@ -115,44 +115,44 @@ const KittenTitle = ({ text }: { text: string }) => (
   <motion.div 
     initial={{ scale: 0.9, opacity: 0 }}
     animate={{ scale: 1, opacity: 1 }}
-    className="relative inline-block mb-12"
+    className="relative inline-block mb-8 md:mb-12"
   >
     {/* Ears */}
     <motion.div 
       animate={{ rotate: [-12, -15, -12] }}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute -top-8 left-6 w-12 h-12 bg-rose-400 rounded-tr-[2rem] shadow-lg" 
+      className="absolute -top-4 md:-top-8 left-4 md:left-6 w-8 h-8 md:w-12 md:h-12 bg-rose-400 rounded-tr-[1.5rem] md:rounded-tr-[2rem] shadow-lg" 
     />
     <motion.div 
       animate={{ rotate: [12, 15, 12] }}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
-      className="absolute -top-8 right-6 w-12 h-12 bg-rose-400 rounded-tl-[2rem] shadow-lg" 
+      className="absolute -top-4 md:-top-8 right-4 md:right-6 w-8 h-8 md:w-12 md:h-12 bg-rose-400 rounded-tl-[1.5rem] md:rounded-tl-[2rem] shadow-lg" 
     />
     
     {/* Main Body (Head) */}
-    <div className="relative bg-rose-400 px-12 py-8 rounded-[3rem] shadow-2xl shadow-rose-300/50 border-4 border-white/20">
-      <h1 className="text-5xl md:text-7xl font-black tracking-tighter drop-shadow-md font-serif italic whitespace-nowrap bg-gradient-to-r from-yellow-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent">
+    <div className="relative bg-rose-400 px-6 py-4 md:px-12 md:py-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-rose-300/50 border-2 md:border-4 border-white/20">
+      <h1 className="text-3xl md:text-7xl font-black tracking-tighter drop-shadow-md font-serif italic whitespace-nowrap bg-gradient-to-r from-yellow-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent">
         {text}
       </h1>
       
       {/* Whiskers Left */}
-      <div className="absolute -left-6 top-1/2 -translate-y-1/2 space-y-3">
-        <div className="w-8 h-1.5 bg-rose-200/60 rounded-full transform -rotate-12" />
-        <div className="w-10 h-1.5 bg-rose-200/60 rounded-full" />
-        <div className="w-8 h-1.5 bg-rose-200/60 rounded-full transform rotate-12" />
+      <div className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 space-y-2 md:space-y-3">
+        <div className="w-4 md:w-8 h-1 md:h-1.5 bg-rose-200/60 rounded-full transform -rotate-12" />
+        <div className="w-6 md:w-10 h-1 md:h-1.5 bg-rose-200/60 rounded-full" />
+        <div className="w-4 md:w-8 h-1 md:h-1.5 bg-rose-200/60 rounded-full transform rotate-12" />
       </div>
       
       {/* Whiskers Right */}
-      <div className="absolute -right-6 top-1/2 -translate-y-1/2 space-y-3">
-        <div className="w-8 h-1.5 bg-rose-200/60 rounded-full transform rotate-12" />
-        <div className="w-10 h-1.5 bg-rose-200/60 rounded-full" />
-        <div className="w-8 h-1.5 bg-rose-200/60 rounded-full transform -rotate-12" />
+      <div className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 space-y-2 md:space-y-3">
+        <div className="w-4 md:w-8 h-1 md:h-1.5 bg-rose-200/60 rounded-full transform rotate-12" />
+        <div className="w-6 md:w-10 h-1 md:h-1.5 bg-rose-200/60 rounded-full" />
+        <div className="w-4 md:w-8 h-1 md:h-1.5 bg-rose-200/60 rounded-full transform -rotate-12" />
       </div>
 
       {/* Eyes (Simple dots) */}
-      <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-12 opacity-20">
-        <div className="w-3 h-3 bg-white rounded-full" />
-        <div className="w-3 h-3 bg-white rounded-full" />
+      <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-6 md:gap-12 opacity-20">
+        <div className="w-2 h-2 md:w-3 md:h-3 bg-white rounded-full" />
+        <div className="w-2 h-2 md:w-3 md:h-3 bg-white rounded-full" />
       </div>
     </div>
 
@@ -160,7 +160,7 @@ const KittenTitle = ({ text }: { text: string }) => (
     <motion.div 
       animate={{ rotate: [0, 10, 0] }}
       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute -right-10 -bottom-4 w-16 h-6 bg-rose-300 rounded-full origin-left -z-10 shadow-md"
+      className="absolute -right-6 md:-right-10 -bottom-2 md:-bottom-4 w-10 h-4 md:w-16 md:h-6 bg-rose-300 rounded-full origin-left -z-10 shadow-md"
     />
   </motion.div>
 );
@@ -196,9 +196,9 @@ const NumberBlock = ({
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
       onClick={() => onClick(block)}
       className={cn(
-        "relative w-full h-full flex items-center justify-center rounded-xl cursor-pointer select-none text-white font-black text-2xl md:text-3xl shadow-lg transition-all border-b-4 border-black/10",
+        "relative w-full h-full flex items-center justify-center rounded-lg md:rounded-xl cursor-pointer select-none text-white font-black text-lg md:text-3xl shadow-lg transition-all border-b-2 md:border-b-4 border-black/10",
         colors[block.value] || 'bg-gray-400',
-        isSelected && "ring-4 ring-white ring-offset-2 ring-offset-rose-100 scale-90 brightness-110 z-10 border-b-0 translate-y-1",
+        isSelected && "ring-2 md:ring-4 ring-white ring-offset-1 md:ring-offset-2 ring-offset-rose-100 scale-90 brightness-110 z-10 border-b-0 translate-y-1",
         !isSelected && "hover:scale-105 active:scale-95"
       )}
     >
@@ -206,7 +206,7 @@ const NumberBlock = ({
       {isSelected && (
         <motion.div 
           layoutId="selection-glow"
-          className="absolute inset-0 bg-white/30 rounded-xl"
+          className="absolute inset-0 bg-white/30 rounded-lg md:rounded-xl"
         />
       )}
     </motion.div>
@@ -484,63 +484,65 @@ export default function App() {
       </header>
 
       {/* Main Game Area */}
-      <main className="flex-1 relative flex items-center justify-center p-4">
-        <div className="w-full max-w-[450px] aspect-[6/10] relative">
-          {/* Grid Background */}
-          <div className="absolute inset-0 grid grid-cols-6 grid-rows-10 gap-2 p-3 bg-white/50 rounded-[2rem] border-4 border-white shadow-inner overflow-hidden">
-            {Array.from({ length: GRID_ROWS * GRID_COLS }).map((_, i) => {
-              const row = Math.floor(i / GRID_COLS);
-              return (
-                <div 
-                  key={i} 
-                  className={cn(
-                    "rounded-xl",
-                    row === 0 ? "bg-rose-500/10" : "bg-rose-100/30"
-                  )} 
-                />
-              );
-            })}
-            
-            {/* Danger Zone Label */}
-            <div className="absolute top-3 left-3 right-3 h-[calc(10%-8px)] flex items-center justify-center pointer-events-none">
-              <span className="text-[10px] font-black text-rose-500/40 uppercase tracking-[0.3em] animate-pulse">
-                {t.dangerZone}
-              </span>
+      <main className="flex-1 relative flex flex-col items-center justify-center p-2 md:p-4 overflow-hidden">
+        <div className="w-full max-w-[450px] flex-1 flex flex-col max-h-[85vh] relative">
+          <div className="flex-1 relative">
+            {/* Grid Background */}
+            <div className="absolute inset-0 grid grid-cols-6 grid-rows-10 gap-1 md:gap-2 p-2 md:p-3 bg-white/50 rounded-[1.5rem] md:rounded-[2rem] border-2 md:border-4 border-white shadow-inner overflow-hidden">
+              {Array.from({ length: GRID_ROWS * GRID_COLS }).map((_, i) => {
+                const row = Math.floor(i / GRID_COLS);
+                return (
+                  <div 
+                    key={i} 
+                    className={cn(
+                      "rounded-lg md:rounded-xl",
+                      row === 0 ? "bg-rose-500/10" : "bg-rose-100/30"
+                    )} 
+                  />
+                );
+              })}
+              
+              {/* Danger Zone Label */}
+              <div className="absolute top-2 md:top-3 left-2 md:left-3 right-2 md:right-3 h-[calc(10%-4px)] md:h-[calc(10%-8px)] flex items-center justify-center pointer-events-none">
+                <span className="text-[8px] md:text-[10px] font-black text-rose-500/40 uppercase tracking-[0.2em] md:tracking-[0.3em] animate-pulse">
+                  {t.dangerZone}
+                </span>
+              </div>
+            </div>
+
+            {/* Blocks */}
+            <div className="absolute inset-0 grid grid-cols-6 grid-rows-10 gap-1 md:gap-2 p-2 md:p-3">
+              <AnimatePresence mode="popLayout">
+                {grid.flat().map((block) => block && (
+                  <motion.div 
+                    key={block.id}
+                    layout
+                    style={{ 
+                      gridRow: block.row + 1, 
+                      gridColumn: block.col + 1 
+                    }}
+                    className="w-full h-full"
+                  >
+                    <NumberBlock 
+                      block={block}
+                      isSelected={selectedIds.includes(block.id)}
+                      onClick={handleBlockClick}
+                    />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </div>
           </div>
 
-          {/* Blocks */}
-          <div className="absolute inset-0 grid grid-cols-6 grid-rows-10 gap-2 p-3">
-            <AnimatePresence mode="popLayout">
-              {grid.flat().map((block) => block && (
-                <motion.div 
-                  key={block.id}
-                  layout
-                  style={{ 
-                    gridRow: block.row + 1, 
-                    gridColumn: block.col + 1 
-                  }}
-                  className="w-full h-full"
-                >
-                  <NumberBlock 
-                    block={block}
-                    isSelected={selectedIds.includes(block.id)}
-                    onClick={handleBlockClick}
-                  />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-
           {/* Current Selection Indicator */}
-          <div className="absolute -bottom-20 left-0 right-0 flex justify-center">
+          <div className="h-16 md:h-20 flex items-center justify-center">
             <div className={cn(
-              "px-8 py-3 rounded-full font-black text-xl flex items-center gap-4 transition-all",
+              "px-4 md:px-8 py-2 md:py-3 rounded-full font-black text-base md:text-xl flex items-center gap-2 md:gap-4 transition-all",
               selectedIds.length > 0 ? "bg-white border-2 border-rose-100 opacity-100 scale-100 shadow-xl" : "opacity-0 scale-90"
             )}>
               <span className="text-rose-300">{t.sum}:</span>
               <span className={cn(
-                "text-3xl font-black",
+                "text-xl md:text-3xl font-black",
                 currentSum > target ? "text-rose-500" : "text-slate-700"
               )}>
                 {currentSum}
