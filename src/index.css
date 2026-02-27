@@ -11,3 +11,17 @@
     @apply bg-rose-50 text-slate-900 antialiased overflow-hidden;
   }
 }
+
+@layer utilities {
+  .text-gradient-fancy {
+    color: white; /* Fallback */
+  }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .text-gradient-fancy {
+      background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}

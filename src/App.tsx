@@ -131,9 +131,9 @@ const KittenTitle = ({ text }: { text: string }) => (
     />
     
     {/* Main Body (Head) */}
-    <div className="relative bg-rose-400 px-6 py-4 md:px-12 md:py-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-rose-300/50 border-2 md:border-4 border-white/20 min-w-[240px] md:min-w-[400px]">
-      <h1 className="text-3xl md:text-7xl font-black tracking-tighter drop-shadow-md font-serif italic whitespace-nowrap">
-        <span className="bg-gradient-to-r from-yellow-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent [-webkit-background-clip:text] [background-clip:text] selection:bg-rose-200">
+    <div className="relative bg-rose-400 px-6 py-4 md:px-12 md:py-8 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-rose-300/50 border-2 md:border-4 border-white/20 min-w-[240px] md:min-w-[400px] flex items-center justify-center">
+      <h1 className="text-3xl md:text-7xl font-black tracking-tighter drop-shadow-md italic whitespace-nowrap text-center font-serif" style={{ fontFamily: '"Bodoni Moda", Georgia, serif' }}>
+        <span className="text-gradient-fancy from-yellow-200 to-cyan-200 inline-block">
           {text}
         </span>
       </h1>
